@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app.js",
-    "heroku-postbuild": "cd clientApp && npm install && npm run build"
+    "heroku-postbuild": "cd clientApp && npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
