@@ -39,7 +39,6 @@ export class DashboardComponent extends Component {
                                                 <div className="float-right">
                                                     <Knob
                                                         value={this.state.value}
-                                                        onChange={this.handleChange}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
@@ -59,7 +58,6 @@ export class DashboardComponent extends Component {
                                                 <div className="float-right">
                                                     <Knob
                                                         value={this.state.value}
-                                                        onChange={this.handleChange}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
@@ -79,7 +77,6 @@ export class DashboardComponent extends Component {
                                                 <div className="float-right">
                                                     <Knob
                                                         value={this.state.value}
-                                                        onChange={this.handleChange}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
@@ -99,7 +96,6 @@ export class DashboardComponent extends Component {
                                                 <div className="float-right">
                                                     <Knob
                                                         value={this.state.value}
-                                                        onChange={this.handleChange}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
