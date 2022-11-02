@@ -37,13 +37,13 @@ export class DashboardComponent extends Component {
                                         <div className="col-sm-6 col-lg-6 col-xl-3">
                                             <div className="card-box mb-0 widget-chart-two">
                                                 <div className="float-right">
-                                                    <Knob
+                                                    {/* <Knob
                                                         value={this.state.value}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
                                                         fgColor={"#66EE66"}
-                                                    />
+                                                    /> */}
                                                 </div>
                                                 <div className="widget-chart-two-content">
                                                     <p className="text-muted mb-0 mt-2">Daily Sales</p>
@@ -56,13 +56,13 @@ export class DashboardComponent extends Component {
                                         <div className="col-sm-6 col-lg-6 col-xl-3">
                                             <div className="card-box mb-0 widget-chart-two">
                                                 <div className="float-right">
-                                                    <Knob
+                                                    {/* <Knob
                                                         value={this.state.value}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
                                                         fgColor={"#66EE66"}
-                                                    />
+                                                    /> */}
                                                 </div>
                                                 <div className="widget-chart-two-content">
                                                     <p className="text-muted mb-0 mt-2">Sales Analytics</p>
@@ -75,13 +75,13 @@ export class DashboardComponent extends Component {
                                         <div className="col-sm-6 col-lg-6 col-xl-3">
                                             <div className="card-box mb-0 widget-chart-two">
                                                 <div className="float-right">
-                                                    <Knob
+                                                    {/* <Knob
                                                         value={this.state.value}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
                                                         fgColor={"#66EE66"}
-                                                    />
+                                                    /> */}
                                                 </div>
                                                 <div className="widget-chart-two-content">
                                                     <p className="text-muted mb-0 mt-2">Statistics</p>
@@ -94,13 +94,13 @@ export class DashboardComponent extends Component {
                                         <div className="col-sm-6 col-lg-6 col-xl-3">
                                             <div className="card-box mb-0 widget-chart-two">
                                                 <div className="float-right">
-                                                    <Knob
+                                                    {/* <Knob
                                                         value={this.state.value}
                                                         thickness={0.1}
                                                         width={100}
                                                         height={100}
                                                         fgColor={"#66EE66"}
-                                                    />
+                                                    /> */}
                                                 </div>
                                                 <div className="widget-chart-two-content">
                                                     <p className="text-muted mb-0 mt-2">Total Revenue</p>
