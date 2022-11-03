@@ -184,7 +184,7 @@ export class NavbarComponent extends Component {
                                 <ul className="navigation-menu">
 
                                     <li className="has-submenu">
-                                        <Link href="index.html"><i className="icon-speedometer"></i>Dashboard</Link>
+                                        <Link to="/"><i className="icon-speedometer"></i>Dashboard</Link>
                                     </li>
 
                                     <li className="has-submenu">
@@ -355,6 +355,13 @@ export class NavbarComponent extends Component {
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </li>
+
+                                    <li className="has-submenu">
+                                        <Link to="/tokens"><i className="icon-present"></i>Tokens</Link>
+                                    </li>
+                                    <li className="has-submenu">
+                                        <Link to="/trade"><i className="icon-present"></i>Trade</Link>
                                     </li>
                                 </ul>
                             </div>

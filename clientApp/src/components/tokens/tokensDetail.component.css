@@ -1,0 +1,15 @@
+.balance {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    line-height: 28px;
+    margin-top: 12px;
+}
+
+.balance-display {
+    display: flex;
+}

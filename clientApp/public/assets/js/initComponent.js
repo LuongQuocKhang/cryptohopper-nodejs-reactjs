@@ -5,8 +5,8 @@ function initKnob() {
     $('.dial').knob();
 }
 
-function initFlotChart() {
-    var plot = this.createRealTimeGraph('#flotRealTime', this.randomData(), ['#02c0ce']);
+function initFlotChart(colors) {
+    var plot = this.createRealTimeGraph('#flotRealTime', this.randomData(), [colors]);
     plot.draw();
 
     function updatePlot() {

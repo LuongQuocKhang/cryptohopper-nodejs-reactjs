@@ -1,0 +1,40 @@
+.token {
+    width: 24px;
+    height: 24px;
+    background: radial-gradient(white 50%, rgba(255, 255, 255, 0) calc(75% + 1px), rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    box-shadow: black 0px 0px 1px;
+    border: 0px solid rgba(255, 255, 255, 0);
+}
+.gKCxsP {
+    gap: 8px;
+    line-height: 24px;
+    font-size: 16px;
+    max-width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hJyIyF {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.jqxpYK {
+    gap: 8px;
+    max-width: 100%;
+}
+
+.fVPQDM {
+    display: flex;
+    text-decoration: none;
+    color: rgb(14, 17, 26);
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.table-hover {
+    cursor: pointer;
+}
