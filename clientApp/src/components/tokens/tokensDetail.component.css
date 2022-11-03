@@ -13,3 +13,9 @@
 .balance-display {
     display: flex;
 }
+.token-btn {
+    width: 100px !important;
+}
+.tradingview-widget-container  {
+    height: 470px !important;
+}

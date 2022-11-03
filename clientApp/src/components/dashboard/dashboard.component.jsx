@@ -119,7 +119,7 @@ export class DashboardComponent extends Component {
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <img src="assets/images/users/avatar-2.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
+                                                <img src="/assets/images/users/avatar-2.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
                                             </td>
 
                                             <td>
@@ -147,7 +147,7 @@ export class DashboardComponent extends Component {
 
                                         <tr>
                                             <td>
-                                                <img src="assets/images/users/avatar-3.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
+                                                <img src="/assets/images/users/avatar-3.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
                                             </td>
 
                                             <td>
@@ -174,7 +174,7 @@ export class DashboardComponent extends Component {
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img src="assets/images/users/avatar-4.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
+                                                <img src="/assets/images/users/avatar-4.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
                                             </td>
 
                                             <td>
@@ -201,7 +201,7 @@ export class DashboardComponent extends Component {
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img src="assets/images/users/avatar-5.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
+                                                <img src="/assets/images/users/avatar-5.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
                                             </td>
 
                                             <td>
@@ -228,7 +228,7 @@ export class DashboardComponent extends Component {
                                         </tr>
                                         <tr>
                                             <td>
-                                                <img src="assets/images/users/avatar-6.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
+                                                <img src="/assets/images/users/avatar-6.jpg" alt="contact-img" title="contact-img" className="rounded-circle thumb-sm" />
                                             </td>
 
                                             <td>

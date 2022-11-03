@@ -9,7 +9,7 @@ export const TokensComponent = () => {
 
     const tokens = [
         {
-            tokenName: "Eher",
+            tokenName: "Ether",
             token: "ETH",
             price: "1560",
             change: "-65.71%",

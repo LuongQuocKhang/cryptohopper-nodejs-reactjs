@@ -6,7 +6,7 @@ import './tokensDetail.component.css';
 export class TokensDetailComponent extends Component {
 
     componentDidMount() {
-        window.initFlotChart("rgb(251, 17, 142)");
+        window.initTradingViewChart();
     }
 
     render() {
@@ -37,7 +37,12 @@ export class TokensDetailComponent extends Component {
                                 </div>
                             </div>
 
-                            <div id="flotRealTime" style={{ height: 350 }} className="flot-chart mt-5"></div>
+                      
+                            <div class="tradingview-widget-container">
+                            <div id="tradingview_3c2dc"></div>
+                            
+                            </div>
+
                             <div className="clearfix"></div>
                         </div>
                     </div>
@@ -46,12 +51,12 @@ export class TokensDetailComponent extends Component {
                         <div className="card-box">
                             <h4 className="header-title m-b-30">Swap</h4>
                             <div class="form-group row">
-                                <div class="col-10">
+                                <div class="col-9">
                                     <input class="form-control" type="number" name="number" placeholder='0'/>
                                 </div>
 
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-outline-pink btn-rounded waves-effect waves-light">ETH</button>
+                                    <button type="button" class="token-btn btn btn-outline-pink btn-rounded waves-effect waves-light">ETH</button>
                                 </div>
                             </div>
                             <div className="form-group row">
@@ -60,14 +65,15 @@ export class TokensDetailComponent extends Component {
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-10">
+                                <div class="col-9">
                                     <input class="form-control" type="number" name="number" placeholder='0' />
                                 </div>
 
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-outline-pink btn-rounded waves-effect waves-light">USDT</button>
+                                    <button type="button" class="token-btn btn btn-outline-pink btn-rounded waves-effect waves-light">USDT</button>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-pink btn-rounded waves-effect waves-light" style={{width: "100%", height: 60}} disabled>Review swap</button>
                         </div>
                     </div>
                 </div>
