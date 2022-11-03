@@ -1,3 +1,4 @@
+/* eslint no-undef: */
 /*!jQuery Knob*/
 /**
  * Downward compatible, touchable dial

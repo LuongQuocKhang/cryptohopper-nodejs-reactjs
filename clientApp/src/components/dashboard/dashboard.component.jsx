@@ -9,12 +9,16 @@ export class DashboardComponent extends Component {
         this.setState({ value: newValue });
     };
 
+    componentDidMount() {
+        window.initKnob();
+        window.initFlotChart();
+        window.initDonutChart();
+        window.initBiPolarChar();
+    }
     render() {
         return (
             <>
-                <div className="wrapper">
-                    <div className="container-fluid">
-                        <div className="row">
+                <div className="row">
                             <div className="col-sm-12">
                                 <div className="page-title-box">
                                     <div className="btn-group float-right">
@@ -27,96 +31,58 @@ export class DashboardComponent extends Component {
                                 </div>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col-12">
                                 <div className="card-box">
                                     <h4 className="header-title mb-4">Account Overview</h4>
 
                                     <div className="row">
-                                        <div className="col-sm-6 col-lg-6 col-xl-3">
-                                            <div className="card-box mb-0 widget-chart-two">
-                                                <div className="float-right">
-                                                    {/* <Knob
-                                                        value={this.state.value}
-                                                        thickness={0.1}
-                                                        width={100}
-                                                        height={100}
-                                                        fgColor={"#66EE66"}
-                                                    /> */}
-                                                </div>
-                                                <div className="widget-chart-two-content">
-                                                    <p className="text-muted mb-0 mt-2">Daily Sales</p>
-                                                    <h3 className="">$35,715</h3>
-                                                </div>
-
+                                        <div className="col-md-6 col-xl-3">
+                                            <div className="card-box tilebox-one">
+                                                <i className="icon-layers float-right text-muted"></i>
+                                                <h6 className="text-muted text-uppercase mt-0">Orders</h6>
+                                                <h2 className="m-b-20" data-plugin="counterup">1,587</h2>
+                                                <span className="badge badge-custom"> +11% </span> <span className="text-muted">From previous period</span>
                                             </div>
                                         </div>
 
-                                        <div className="col-sm-6 col-lg-6 col-xl-3">
-                                            <div className="card-box mb-0 widget-chart-two">
-                                                <div className="float-right">
-                                                    {/* <Knob
-                                                        value={this.state.value}
-                                                        thickness={0.1}
-                                                        width={100}
-                                                        height={100}
-                                                        fgColor={"#66EE66"}
-                                                    /> */}
-                                                </div>
-                                                <div className="widget-chart-two-content">
-                                                    <p className="text-muted mb-0 mt-2">Sales Analytics</p>
-                                                    <h3 className="">$97,511</h3>
-                                                </div>
-
+                                        <div className="col-md-6 col-xl-3">
+                                            <div className="card-box tilebox-one">
+                                                <i className="icon-paypal float-right text-muted"></i>
+                                                <h6 className="text-muted text-uppercase mt-0">Revenue</h6>
+                                                <h2 className="m-b-20">$<span data-plugin="counterup">46,782</span></h2>
+                                                <span className="badge badge-danger"> -29% </span> <span className="text-muted">From previous period</span>
                                             </div>
                                         </div>
 
-                                        <div className="col-sm-6 col-lg-6 col-xl-3">
-                                            <div className="card-box mb-0 widget-chart-two">
-                                                <div className="float-right">
-                                                    {/* <Knob
-                                                        value={this.state.value}
-                                                        thickness={0.1}
-                                                        width={100}
-                                                        height={100}
-                                                        fgColor={"#66EE66"}
-                                                    /> */}
-                                                </div>
-                                                <div className="widget-chart-two-content">
-                                                    <p className="text-muted mb-0 mt-2">Statistics</p>
-                                                    <h3 className="">$954</h3>
-                                                </div>
-
+                                        <div className="col-md-6 col-xl-3">
+                                            <div className="card-box tilebox-one">
+                                                <i className="icon-chart float-right text-muted"></i>
+                                                <h6 className="text-muted text-uppercase mt-0">Average Price</h6>
+                                                <h2 className="m-b-20">$<span data-plugin="counterup">15.9</span></h2>
+                                                <span className="badge badge-custom"> 0% </span> <span className="text-muted">From previous period</span>
                                             </div>
                                         </div>
 
-                                        <div className="col-sm-6 col-lg-6 col-xl-3">
-                                            <div className="card-box mb-0 widget-chart-two">
-                                                <div className="float-right">
-                                                    {/* <Knob
-                                                        value={this.state.value}
-                                                        thickness={0.1}
-                                                        width={100}
-                                                        height={100}
-                                                        fgColor={"#66EE66"}
-                                                    /> */}
-                                                </div>
-                                                <div className="widget-chart-two-content">
-                                                    <p className="text-muted mb-0 mt-2">Total Revenue</p>
-                                                    <h3 className="">$32,540</h3>
-                                                </div>
-
+                                        <div className="col-md-6 col-xl-3">
+                                            <div className="card-box tilebox-one">
+                                                <i className="icon-rocket float-right text-muted"></i>
+                                                <h6 className="text-muted text-uppercase mt-0">Product Sold</h6>
+                                                <h2 className="m-b-20" data-plugin="counterup">1,890</h2>
+                                                <span className="badge badge-custom"> +89% </span> <span className="text-muted">Last year</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col-xl-6">
                                 <div className="card-box">
-                                    <h4 className="header-title">Order Overview</h4>
-                                    <div id="flotRealTime" style={{height: 350}} class="flot-chart mt-5"></div>
+                                    <h4 className="header-title">Account Balances</h4>
+                                    <div id="flotRealTime" style={{ height: 350 }} className="flot-chart mt-5"></div>
                                 </div>
                             </div>
 
@@ -125,13 +91,13 @@ export class DashboardComponent extends Component {
                                     <h4 className="header-title">Sales Overview</h4>
 
                                     <div id="combine-chart">
-                                        <div id="combine-chart-container" className="flot-chart mt-5" style={{ height: 350 }}>
-                                        </div>
+                                        <div id="bi-polar-bar" className="ct-chart ct-golden-section" style={{ height: 370 }}></div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
+
                         <div className="row">
                             <div className="col-xl-8">
                                 <div className="card-box">
@@ -309,8 +275,98 @@ export class DashboardComponent extends Component {
 
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="card-box">
+                                    <h4 className="header-title mb-4">Last Transactions</h4>
+
+                                    <ul className="list-unstyled transaction-list slimscroll mb-0">
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">Advertising</span>
+                                            <span className="float-right text-success tran-price">+$230</span>
+                                            <span className="float-right text-muted">07/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-up text-danger"></i>
+                                            <span className="tran-text">Support licence</span>
+                                            <span className="float-right text-danger tran-price">-$965</span>
+                                            <span className="float-right text-muted">07/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">Extended licence</span>
+                                            <span className="float-right text-success tran-price">+$830</span>
+                                            <span className="float-right text-muted">07/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">Advertising</span>
+                                            <span className="float-right text-success tran-price">+$230</span>
+                                            <span className="float-right text-muted">05/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-up text-danger"></i>
+                                            <span className="tran-text">New plugins added</span>
+                                            <span className="float-right text-danger tran-price">-$452</span>
+                                            <span className="float-right text-muted">05/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">Google Inc.</span>
+                                            <span className="float-right text-success tran-price">+$230</span>
+                                            <span className="float-right text-muted">04/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-up text-danger"></i>
+                                            <span className="tran-text">Facebook Ad</span>
+                                            <span className="float-right text-danger tran-price">-$364</span>
+                                            <span className="float-right text-muted">03/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">New sale</span>
+                                            <span className="float-right text-success tran-price">+$230</span>
+                                            <span className="float-right text-muted">03/09/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-down text-success"></i>
+                                            <span className="tran-text">Advertising</span>
+                                            <span className="float-right text-success tran-price">+$230</span>
+                                            <span className="float-right text-muted">29/08/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+
+                                        <li>
+                                            <i className="dripicons-arrow-up text-danger"></i>
+                                            <span className="tran-text">Support licence</span>
+                                            <span className="float-right text-danger tran-price">-$854</span>
+                                            <span className="float-right text-muted">27/08/2017</span>
+                                            <span className="clearfix"></span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
             </>
         )
     }
