@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import AppRouter from './components/AppRouter';
 
 import NavbarComponent from './components/layout/navbar/navbar.component';
