@@ -266,3 +266,12 @@ var options = {
 
 new Chartist.Bar('#bi-polar-bar', data, options);
 }
+
+
+function initAmountRange() {
+    $("#range_02").ionRangeSlider({
+        min: 100,
+        max: 1000,
+        from: 550
+    });
+}

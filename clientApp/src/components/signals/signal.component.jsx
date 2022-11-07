@@ -22,7 +22,7 @@ export class SignalComponent extends Component {
 
         const renderedTableRow = signals.map((signal, index) => {
             return (
-                <tr>
+                <tr key={index + 1}>
                     <th>{index + 1}</th>
                     <td>
                         <div className="sc-1bit9h6-2 sc-1bit9h6-3 fVPQDM jqxpYK">
@@ -43,13 +43,13 @@ export class SignalComponent extends Component {
                     <td>{signal.target_3}</td>
                     <td>{signal.stoploss}</td>
                     <td>
-                        <button type="button" class="btn btn-success waves-light waves-effect" disabled>{signal.position}</button>
+                        <button type="button" className="btn btn-success waves-light waves-effect" disabled>{signal.position}</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-outline-pink btn-rounded waves-effect waves-light">View</button>
+                        <button type="button" className="btn btn-outline-pink btn-rounded waves-effect waves-light">View</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-outline-pink btn-rounded waves-effect waves-light">Place order</button>
+                        <button type="button" className="btn btn-outline-pink btn-rounded waves-effect waves-light">Place order</button>
                     </td>
                 </tr>
 
@@ -89,7 +89,7 @@ export class SignalComponent extends Component {
                                 </div>
                             </div>
 
-                            <table class="table mb-0">
+                            <table className="table mb-0">
                                 <thead>
                                     <tr>
                                         <th>#</th>

@@ -5,7 +5,9 @@ export class SwapComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpened: false
+      isOpened: false,
+      firstToken : "ETH",
+      secondToken: "USDT"
     }
   }
 
@@ -13,6 +15,16 @@ export class SwapComponent extends Component {
     this.setState({
       isOpened: !this.state.isOpened
     });
+  }
+
+  swapCurrency = async () => {
+    let firstToken = this.state.firstToken;
+    let secondToken = this.state.secondToken;
+    this.setState({
+      ...this.state,
+      firstToken: secondToken,
+      secondToken: firstToken
+    })
   }
 
   render() {
@@ -40,14 +52,17 @@ export class SwapComponent extends Component {
                   <input className="form-control" type="number" name="number" placeholder='0' />
                 </div>
 
-                <div className="col-2">
+                <div className="col-2" style={{display: "contents"}}>
                   <button type="button" className="token-btn btn btn-outline-pink btn-rounded waves-effect waves-light"
-                    data-toggle="modal" data-target="#from_currency" onClick={() => this.openModel()} >ETH</button>
+                    data-toggle="modal" data-target="#from_currency" onClick={() => this.openModel()} >{this.state.firstToken}</button>
                 </div>
               </div>
               <div className="form-group row">
                 <div className="col-lg-10" style={{ textAlign: "center" }}>
-                  <button type="button" className="btn btn-outline-secondary btn-rounded waves-light waves-effect"><i className="mdi mdi-arrow-down"></i></button>
+                  <button type="button" className="btn btn-outline-secondary btn-rounded waves-light waves-effect"
+                    onClick={() => this.swapCurrency()}>
+                    <i className="mdi mdi-arrow-down"></i>
+                  </button>
                 </div>
               </div>
               <div className="form-group row">
@@ -55,9 +70,9 @@ export class SwapComponent extends Component {
                   <input className="form-control" type="number" name="number" placeholder='0' />
                 </div>
 
-                <div className="col-2">
+                <div className="col-2" style={{display: "contents"}}>
                   <button type="button" className="token-btn btn btn-outline-pink btn-rounded waves-effect waves-light"
-                    data-toggle="modal" data-target="#to_currency">USDT</button>
+                    data-toggle="modal" data-target="#to_currency" onClick={() => this.openModel()}>{this.state.secondToken}</button>
                 </div>
               </div>
               <button type="button" className="btn btn-pink btn-rounded waves-effect waves-light" style={{ width: "100%", height: 60 }} disabled>Review swap</button>
@@ -71,18 +86,33 @@ export class SwapComponent extends Component {
             <div className="modal-content">
               <div className="modal-header">
                 <button type="button" className="close" data-dismiss="modal" aria-hidden="true" onClick={() => this.openModel()}>×</button>
-                <h4 className="modal-title" id="myModalLabel">Modal Heading</h4>
+                <h4 className="modal-title" id="myModalLabel">Select token</h4>
               </div>
               <div className="modal-body bordered">
-                <h6>Text in a modal</h6>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                <div className="form-group row">
+                  <label className="col-2 col-form-label">Search</label>
+                  <div className="col-10">
+                    <input type="text" className="form-control" placeholder="ETH" />
+                    <span className="help-block"><small>A block of help text that breaks onto a new line and may extend beyond one line.</small></span>
+                  </div>
+                </div>
                 <hr />
-                <h6>Overflowing text to show scroll behavior</h6>
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <div className="form-group row">
+                  <label className="col-2 col-form-label">Tokens</label>
+                  <div className="col-10">
+                    <select multiple className="form-control">
+                      <option value={"ETH"}>ETH</option>
+                      <option value={"BTC"}>BTC</option>
+                      <option value={"USDT"}>USDT</option>
+                      <option value={"USDC"}>USDC</option>
+                      <option value={"BNB"}>BNB</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-light waves-effect" data-dismiss="modal" onClick={() => this.openModel()}>Close</button>
+                <button type="button" className="btn btn-light waves-effect" data-dismiss="modal" onClick={() => this.openModel()}>Select</button>
               </div>
             </div>
           </div>

@@ -8,6 +8,10 @@ import WalletComponent from './wallet/wallet.component';
 import TradeComponent from './trade/trade.component';
 import TokensDetailComponent from './tokens/tokensDetail.component';
 import SignalComponent from './signals/signal.component';
+import BacktestingComponent from './backtesting/backtesting.component';
+import StrategiesComponent from './strategies/strategies.component';
+import StrategiesNewComponent from './strategies/strategies.new.component';
+import StrategiesEditComponent from './strategies/strategies.edit.component';
 
 export class AppRouter extends Component {
     render() {
@@ -24,17 +28,39 @@ export class AppRouter extends Component {
                         <Route path="/trade" element={
                             <TradeComponent />
                         } />
+
+                        {/* Token Route */}
                         <Route path="/tokens" element={
                             <TokensComponent />
                         } />
+                         <Route path="/tokens/detail/:token" element={
+                            <TokensDetailComponent />
+                        } />
+
+                        {/* Wallet Route */}
                         <Route path="/wallet" element={
                             <WalletComponent />
                         } />
+
+                        {/* Signals Route */}
                         <Route path="/signals" element={
                             <SignalComponent />
                         } />
-                        <Route path="/tokens/detail/:token" element={
-                            <TokensDetailComponent />
+
+                        {/* Backtesting Route */}
+                        <Route path="/backtesting" element={
+                            <BacktestingComponent />
+                        } />
+
+                        {/* strategies Route */}
+                        <Route path="/strategies" element={
+                            <StrategiesComponent />
+                        } />
+                        <Route path="/strategies/new" element={
+                            <StrategiesNewComponent />
+                        } />
+                         <Route path="/strategies/:strategyId" element={
+                            <StrategiesEditComponent />
                         } />
                     </Routes>
                 </div>

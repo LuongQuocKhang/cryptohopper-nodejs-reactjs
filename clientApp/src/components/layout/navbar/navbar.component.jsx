@@ -160,8 +160,8 @@ export class NavbarComponent extends Component {
                                             <Link href="#" className="dropdown-item notify-item">
                                                 <i className="fi-cog"></i> <span>Settings</span>
                                             </Link>
-                                            <Link href="#" className="dropdown-item notify-item">
-                                                <i className="fi-help"></i> <span>Support</span>
+                                            <Link to='/wallet' className="dropdown-item notify-item">
+                                                <i className="fi-help"></i> <span>Wallet</span>
                                             </Link>
                                             <Link href="#" className="dropdown-item notify-item">
                                                 <i className="fi-lock"></i> <span>Lock Screen</span>
@@ -196,6 +196,12 @@ export class NavbarComponent extends Component {
                                     </li>
                                     <li className="has-submenu">
                                         <Link to="/signals"><i className="icon-fire"></i>Signals</Link>
+                                    </li>
+                                    <li className="has-submenu">
+                                        <Link to="/backtesting"><i className="icon-fire"></i>Back testing</Link>
+                                    </li>
+                                    <li className="has-submenu">
+                                        <Link to="/strategies"><i className="icon-fire"></i>Strategies</Link>
                                     </li>
                                 </ul>
                             </div>

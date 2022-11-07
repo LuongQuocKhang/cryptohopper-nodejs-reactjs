@@ -77,6 +77,7 @@ export class TokensDetailComponent extends Component {
                         </div>
                     </div>
                 </div>
+                
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="card-box task-detail">
