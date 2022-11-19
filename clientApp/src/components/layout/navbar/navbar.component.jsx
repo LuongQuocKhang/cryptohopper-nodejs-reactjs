@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import AuthService from '../../../services/auth.service'
 
 export class NavbarComponent extends Component {
     render() {
+
+        const logout = async () => {
+            AuthService.logout();
+            this.props.setToken(null);
+            window.location.href = "/login";
+        }
+
         return (
             <>
                 <header id="topnav">
